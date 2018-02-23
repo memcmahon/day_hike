@@ -16,5 +16,11 @@ describe "As a visitor" do
       expect(page).to have_content(@trail.length)
       expect(page).to have_content(@trail.address)
     end
+
+    it "I see total number of trips that have included this trail" do
+      visit trail_path(@trail)
+
+      expect(page).to have_content("Total trips: 3")
+    end
   end
 end
