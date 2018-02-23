@@ -24,12 +24,11 @@ describe "As a visitor" do
       expect(page).to_not have_content(@trail_3.length)
       expect(page).to_not have_content(@trail_3.address)
     end
+
+    it "I can see the total planed distance" do
+      visit trip_path(@trip)
+
+      expect(page).to have_content("Total distance: 3")
+    end
   end
 end
-
-
-# As a visitor,
-#   when I visit the trips index,
-#   and I click a link to a trip show,
-#   I see a list of trails included in the trip,
-#   I see the name, address, and length for each trail.
