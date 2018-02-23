@@ -13,3 +13,11 @@
     <li><%= trail.address %></li>
   </ul>
 <% end %>
+
+<h3>Trail Names:</h3>
+  <ul class="trail-list">
+    <% @trip.trails.each do |trail| %>
+        <li>trail.name</li>
+    <% end %>
+  </ul>
+    

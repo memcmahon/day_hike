@@ -43,5 +43,13 @@ describe "As a visitor" do
       expect(page).to have_content("Longest hiking distance: 6")
       expect(page).to have_content("Shortest hiking distance: 2")
     end
+
+    it "has a list of hike names" do
+      visit trip_path(@trip)
+
+      within("trail-list")
+        expect(page).to have_content(@trail_1.name)
+        expect(page).to have_content(@trail_2.name)
+    end
   end
 end
