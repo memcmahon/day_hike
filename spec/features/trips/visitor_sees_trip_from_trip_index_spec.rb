@@ -37,10 +37,15 @@ describe "As a visitor" do
       expect(page).to have_content("Average hiking distance: 4")
     end
 
-    it "I can see the longest and shortest hiking distance" do
+    it "I can see the longest hiking distance" do
       visit trip_path(@trip)
 
       expect(page).to have_content("Longest hiking distance: 6")
+    end
+
+    it "I can see the shortest hiking distance" do
+      visit trip_path(@trip)
+
       expect(page).to have_content("Shortest hiking distance: 2")
     end
 
