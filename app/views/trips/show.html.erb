@@ -2,6 +2,8 @@
 
 <p>Total distance: <%= @trip.total_distance %></p>
 <p>Average hiking distance: <%= @trip.average_trail_length %></p>
+<p>Longest hiking distance: <%= @trip.longest_trail.length %></p>
+<p>Shortest hiking distance: <%= @trip.shortest_trail.length %></p>
 
 <h3>Trails</h3>
 <% @trip.trails.each do |trail| %>
@@ -10,5 +12,4 @@
     <li><%= trail.length %></li>
     <li><%= trail.address %></li>
   </ul>
-
 <% end %>
